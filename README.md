@@ -71,10 +71,10 @@ Hello    2
 
 ### B. Arbitrary size Hadoop cluster
 
-##### 1. pull docker images and clone github repository
+##### 1. clone github repository
 
 ```
-do 1~3 like section A```
+do 2 like section A
 ```
 
 ##### 2. rebuild docker image
