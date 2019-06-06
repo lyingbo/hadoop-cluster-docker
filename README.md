@@ -4,7 +4,7 @@
 - 博客: [基于Docker搭建Hadoop集群](http://blog.sina.com.cn/lyingbo/)
 
 
-###section A. 3 Nodes Hadoop Cluster
+### A. 3 Nodes Hadoop Cluster
 
 ##### 1. pull docker image
 
@@ -69,11 +69,13 @@ Hadoop    1
 Hello    2
 ```
 
-###section B. Arbitrary size Hadoop cluster
+### B. Arbitrary size Hadoop cluster
 
 ##### 1. pull docker images and clone github repository
 
-do 1~3 like section A
+```
+do 1~3 like section A```
+```
 
 ##### 2. rebuild docker image
 
@@ -93,5 +95,6 @@ sudo ./start-container.sh 5
 
 ##### 4. run hadoop cluster 
 
+```
 do 5~6 like section A
-
+```
