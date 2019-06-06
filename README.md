@@ -9,7 +9,7 @@
 ##### 1. pull docker image
 
 ```
-sudo docker pull lyingbo/hadoop:1.0
+sudo docker pull lyingbo/hadoop:3.2.0
 ```
 
 ##### 2. clone github repository
