@@ -167,4 +167,7 @@
 # Directory containing service examples
 # export YARN_SERVICE_EXAMPLES_DIR = $HADOOP_YARN_HOME/share/hadoop/yarn/yarn-service-examples
 # export YARN_CONTAINER_RUNTIME_DOCKER_RUN_OVERRIDE_DISABLE=true
+#export YARN_RESOURCEMANAGER_USER=root
+#export HADOOP_SECURE_DN_USER=yarn
+#export YARN_NODEMANAGER_USER=root
 

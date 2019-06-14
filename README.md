@@ -1,84 +1,79 @@
 ## Run Hadoop Cluster within Docker Containers
 
 
-- 博客: [基于Docker搭建Hadoop集群](http://blog.sina.com.cn/lyingbo/)
+- 博客: [基于Docker搭建Hadoop集群](http://blog.sina.com.cn/s/blog_6f83fdb40102yhur.html)
 
 
 ### A. 3 Nodes Hadoop Cluster
 
 ##### 1. pull docker image
-
 ```
 sudo docker pull lyingbo/hadoop:3.2.0
 ```
 
 ##### 2. clone github repository
-
 ```
 git clone https://github.com/lyingbo/hadoop-cluster-docker.git
 ```
 
 ##### 3. create hadoop network
-
 ```
 sudo docker network create --driver=bridge hadoop
 ```
 
 ##### 4. start container
-
 ```
 cd hadoop-cluster-docker
 sudo ./start-container.sh
 ```
 
 **output:**
-
 ```
 start hadoop-master container...
 start hadoop-slave1 container...
 start hadoop-slave2 container...
-root@hadoop-master:~# 
+root@hadoop-master:/# 
 ```
 - start 3 containers with 1 master and 2 slaves
 - you will get into the /root directory of hadoop-master container
 
 ##### 5. start hadoop
-
 ```
 start-all.sh
 ```
 
 ##### 6. run wordcount
-
 ```
 run-wordcount.sh
 ```
 
 **output**
-
 ```
 input file1.txt:
-Hello Hadoop
+Hello Docker
 
 input file2.txt:
-Hello Docker
+Hello Hadoop
+
+input file3.txt:
+Hello MapReduce
 
 wordcount output:
 Docker    1
 Hadoop    1
-Hello    2
+Hello     3
+MapReduce    1
+
 ```
 
 ### B. Arbitrary size Hadoop cluster
 
 ##### 1. clone github repository
-
 ```
 do 2 like section A
 ```
 
 ##### 2. rebuild docker image
-
 ```
 sudo ./resize-cluster.sh 5
 ```
@@ -87,14 +82,12 @@ sudo ./resize-cluster.sh 5
 
 
 ##### 3. start container
-
 ```
 sudo ./start-container.sh 5
 ```
 - use the same parameter as the step 2
 
 ##### 4. run hadoop cluster 
-
 ```
 do 5~6 like section A
 ```

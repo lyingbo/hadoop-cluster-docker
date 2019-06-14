@@ -28,19 +28,18 @@ RUN mkdir -p $HADOOP_HOME/namenode && \
 
 COPY config/* /tmp/
 
-RUN mv /tmp/ssh_config ~/.ssh/config && \
-    mv /tmp/hadoop-env.sh $HADOOP_HOME/etc/hadoop/hadoop-env.sh && \
+RUN mv /tmp/hadoop-env.sh $HADOOP_HOME/etc/hadoop/hadoop-env.sh && \
+    mv /tmp/mapred-env.sh $HADOOP_HOME/etc/hadoop/mapred-env.sh && \
     mv /tmp/hdfs-site.xml $HADOOP_HOME/etc/hadoop/hdfs-site.xml && \ 
     mv /tmp/core-site.xml $HADOOP_HOME/etc/hadoop/core-site.xml && \
     mv /tmp/mapred-site.xml $HADOOP_HOME/etc/hadoop/mapred-site.xml && \
     mv /tmp/yarn-site.xml $HADOOP_HOME/etc/hadoop/yarn-site.xml && \
     mv /tmp/workers $HADOOP_HOME/etc/hadoop/workers && \
-    mv /tmp/run-wordcount.sh ~/run-wordcount.sh
-
-RUN chmod +x ~/start-hadoop.sh && \
-    chmod +x ~/run-wordcount.sh && \
-    chmod +x $HADOOP_HOME/sbin/start-dfs.sh && \
-    chmod +x $HADOOP_HOME/sbin/start-yarn.sh 
+    mv /tmp/start-dfs.sh $HADOOP_HOME/sbin/start-dfs.sh && \
+    mv /tmp/start-yarn.sh $HADOOP_HOME/sbin/start-yarn.sh && \
+    mv /tmp/stop-dfs.sh $HADOOP_HOME/sbin/stop-dfs.sh && \
+    mv /tmp/stop-yarn.sh $HADOOP_HOME/sbin/stop-yarn.sh && \
+    mv /tmp/run-wordcount.sh $HADOOP_HOME/sbin/run-wordcount.sh
 
 # format namenode
 RUN $HADOOP_HOME/bin/hdfs namenode -format
