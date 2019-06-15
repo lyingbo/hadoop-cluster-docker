@@ -75,7 +75,6 @@ Docker  1
 Hadoop  1
 Hello   3
 MapReduce       1
-
 ```
 
 ### B. Arbitrary size Hadoop cluster
