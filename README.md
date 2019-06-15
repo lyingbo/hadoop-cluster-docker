@@ -42,6 +42,18 @@ root@hadoop-master:/#
 start-all.sh
 ```
 
+**output**
+```
+Starting namenodes on [hadoop-master]
+hadoop-master: Warning: Permanently added 'hadoop-master,172.18.0.2' (ECDSA) to the list of known hosts.
+Starting datanodes
+hadoop-slave2: Warning: Permanently added 'hadoop-slave2,172.18.0.4' (ECDSA) to the list of known hosts.
+hadoop-slave1: Warning: Permanently added 'hadoop-slave1,172.18.0.3' (ECDSA) to the list of known hosts.
+Starting secondary namenodes [hadoop-master]
+Starting resourcemanager
+Starting nodemanagers
+```
+
 ##### 6. run wordcount
 ```
 run-wordcount.sh
@@ -59,10 +71,10 @@ input file3.txt:
 Hello MapReduce
 
 wordcount output:
-Docker    1
-Hadoop    1
-Hello     3
-MapReduce    1
+Docker  1
+Hadoop  1
+Hello   3
+MapReduce       1
 
 ```
 
