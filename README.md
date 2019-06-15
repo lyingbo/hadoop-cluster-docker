@@ -16,12 +16,7 @@ sudo docker pull lyingbo/hadoop:3.2.0
 git clone https://github.com/lyingbo/hadoop-cluster-docker.git
 ```
 
-##### 3. create hadoop network
-```
-sudo docker network create --driver=bridge hadoop
-```
-
-##### 4. start container
+##### 3. start container
 ```
 cd hadoop-cluster-docker
 sudo ./start-container.sh
@@ -37,7 +32,7 @@ root@hadoop-master:/#
 - start 3 containers with 1 master and 2 slaves
 - you will get into the /root directory of hadoop-master container
 
-##### 5. start hadoop
+##### 4. start hadoop
 ```
 start-all.sh
 ```
@@ -54,7 +49,7 @@ Starting resourcemanager
 Starting nodemanagers
 ```
 
-##### 6. run wordcount
+##### 5. run wordcount
 ```
 run-wordcount.sh
 ```
@@ -100,5 +95,5 @@ sudo ./start-container.sh 5
 
 ##### 4. run hadoop cluster 
 ```
-do 5~6 like section A
+do 4~5 like section A
 ```
