@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 MAINTAINER lyingbo <lyingbo@aliyun.com>
 
@@ -8,7 +8,7 @@ WORKDIR /root
 RUN apt-get update && apt-get install -y ssh openjdk-8-jdk wget
 
 # install hadoop 3.2.0 
-RUN wget http://mirrors.sonic.net/apache/hadoop/common/hadoop-3.2.0/hadoop-3.2.0.tar.gz && \
+RUN wget https://archive.apache.org/dist/hadoop/common/hadoop-3.2.0/hadoop-3.2.0.tar.gz && \
     tar -xzvf hadoop-3.2.0.tar.gz && \
     mv hadoop-3.2.0 /usr/local/ && \
     rm hadoop-3.2.0.tar.gz
